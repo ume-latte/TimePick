@@ -11,9 +11,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 複製 Python 代碼
 COPY backend/ .
 
-# 開放 Flask 端口（Cloud Run 預設用 PORT 環境變數）
+# 開放 FastAPI 端口
 ENV PORT=8080
 EXPOSE 8080
 
-# 啟動 Flask 應用
-CMD ["python", "app.py"]
+# 啟動 FastAPI
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
