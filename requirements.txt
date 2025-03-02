@@ -1,7 +1,0 @@
-fastapi
-uvicorn[standard]
-google.generativeai
-grpcio
-pillow
-requests
-git+https://github.com/ozgur/python-firebase
